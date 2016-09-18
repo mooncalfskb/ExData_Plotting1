@@ -22,14 +22,14 @@ dev.off(dev.list()["RStudioGD"])
 dev.set(2)
 dev.cur()
 #set up plot, make fonts smaller, x, y labels
-plot(feb$DateTime,feb$Global_active_power,type="n", xlab="", ylab="Global Active Power (kilowatts)",cex.lab=.75, ine
+plot(feb$DateTime,feb$Global_active_power,type="n", xlab="", ylab="Global Active Power (kilowatts)")
 lines(feb$DateTime,feb$Global_active_power)
 
 #write to png
 dev.off(dev.list()["RStudioGD"])
 png("/Users/mooncalf/Dropbox/skb/coursera/ExData_Plotting1/plot2.png", width=480, height=480)
 #set up plot, make fonts smaller, x, y labels
-plot(feb$DateTime,feb$Global_active_power,type="n", xlab="", ylab="Global Active Power (kilowatts)",cex.lab=.75, ine
+plot(feb$DateTime,feb$Global_active_power,type="n", xlab="", ylab="Global Active Power (kilowatts)")
 lines(feb$DateTime,feb$Global_active_power)
 dev.off()
 
