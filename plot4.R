@@ -29,12 +29,12 @@ lines(feb$DateTime,feb$Global_active_power)
 
 #view it on screen
 #set up plot, make fonts smaller, x, y labels
-plot(feb$DateTime,feb$Global_reactivVoltageb="datetime", ylab="Voltage")
+plot(feb$DateTime,feb$Voltage, type="l", xlab="datetime", ylab="Voltage")
 
 #view it on screen
 #overlay plots and set y axis
 plot(feb$DateTime,feb$Sub_metering_1, type="l", col="black", ylim=c(0,38), xlab="", ylab="Energy Sub metering")
-legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lwd=c(2.5,2.5,bty="n", 2.5),col=c("black","red","blue"), cex=1) 
+legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), bty="n",lwd=c(2.5,2.5, bty="n", 2.5),col=c("black","red","blue"), cex=1) 
 par(new=TRUE)
 plot(feb$DateTime,feb$Sub_metering_2, type="l", col="red",  ylim=c(0,38), xlab="", ylab="")
 par(new=TRUE)
@@ -64,14 +64,13 @@ par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 plot(feb$DateTime,feb$Global_active_power,type="n", xlab="", ylab="Global Active Power")
 lines(feb$DateTime,feb$Global_active_power)
 
-#view it on screen
 #set up plot, make fonts smaller, x, y labels
-plot(feb$DateTime,feb$Global_reactivVoltageb="datetime", ylab="Voltage")
+plot(feb$DateTime,feb$Voltage, type="l", xlab="datetime", ylab="Voltage")
 
 #view it on screen
 #overlay plots and set y axis
 plot(feb$DateTime,feb$Sub_metering_1, type="l", col="black", ylim=c(0,38), xlab="", ylab="Energy Sub metering")
-legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lwd=c(2.5,2.5,bty="n", 2.5),col=c("black","red","blue"), cex=1) 
+legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), bty="n", lwd=c(2.5,2.5,bty="n", 2.5),col=c("black","red","blue"), cex=1) 
 par(new=TRUE)
 plot(feb$DateTime,feb$Sub_metering_2, type="l", col="red",  ylim=c(0,38), xlab="", ylab="")
 par(new=TRUE)
